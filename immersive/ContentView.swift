@@ -10,6 +10,7 @@ import RealityKit
 import RealityKitContent
 
 struct ContentView: View {
+    @EnvironmentObject var globalState: GlobalState
 
     @State private var enlarge = false
     @State private var showImmersiveSpace = false
@@ -17,10 +18,18 @@ struct ContentView: View {
 
     @Environment(\.openImmersiveSpace) var openImmersiveSpace
     @Environment(\.dismissImmersiveSpace) var dismissImmersiveSpace
+    
+
+    func Regenerate(){
+        if (showImmersiveSpace){
+            globalState.regenerate = true
+        }
+    }
 
     var body: some View {
+        
         RealityView { content in
-            // Add the initial RealityKit content
+            // Add the initial ReatyKit content
             if let scene = try? await Entity(named: "Scene", in: realityKitContentBundle) {
                 content.add(scene)
             }
@@ -31,7 +40,8 @@ struct ContentView: View {
                 scene.transform.scale = [uniformScale, uniformScale, uniformScale]
             }
         }
-        .onChange(of: showImmersiveSpace) { _, newValue in
+        .onChange(of: showImmersiveSpace) { _
+            , newValue in
             Task {
                 if newValue {
                     switch await openImmersiveSpace(id: "ImmersiveSpace") {
@@ -57,6 +67,9 @@ struct ContentView: View {
                 VStack (spacing: 12) {
                     Toggle("Enlarge RealityView Content", isOn: $enlarge)
                     Toggle("Show ImmersiveSpace", isOn: $showImmersiveSpace)
+                    Button(action: Regenerate) {
+                        Text("Regenerate")
+                    }
                 }
             }
         }

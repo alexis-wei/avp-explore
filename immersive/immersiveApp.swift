@@ -9,13 +9,19 @@ import SwiftUI
 
 @main
 struct immersiveApp: App {
+    @StateObject private var globalState = GlobalState()
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            ContentView().environmentObject(globalState)
         }.windowStyle(.volumetric)
 
+
         ImmersiveSpace(id: "ImmersiveSpace") {
-            ImmersiveView()
+//            ImmersiveView()
+            SphereView().environmentObject(globalState)
         }.immersionStyle(selection: .constant(.full), in: .full)
+        
+    
+
     }
 }

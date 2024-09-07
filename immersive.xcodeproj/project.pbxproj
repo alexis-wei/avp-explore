@@ -15,6 +15,8 @@
 		F340EB5E2C87F8E300FE51A2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F340EB5D2C87F8E300FE51A2 /* Assets.xcassets */; };
 		F340EB612C87F8E300FE51A2 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F340EB602C87F8E300FE51A2 /* Preview Assets.xcassets */; };
 		F340EB6C2C87F8E300FE51A2 /* immersiveTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F340EB6B2C87F8E300FE51A2 /* immersiveTests.swift */; };
+		F340EB782C88E87800FE51A2 /* SphereView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F340EB772C88E87800FE51A2 /* SphereView.swift */; };
+		F340EB7A2C8AC66400FE51A2 /* GlobalState.swift in Sources */ = {isa = PBXBuildFile; fileRef = F340EB792C8AC66400FE51A2 /* GlobalState.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -39,6 +41,8 @@
 		F340EB622C87F8E300FE51A2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F340EB672C87F8E300FE51A2 /* immersiveTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = immersiveTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F340EB6B2C87F8E300FE51A2 /* immersiveTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = immersiveTests.swift; sourceTree = "<group>"; };
+		F340EB772C88E87800FE51A2 /* SphereView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SphereView.swift; sourceTree = "<group>"; };
+		F340EB792C8AC66400FE51A2 /* GlobalState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlobalState.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -84,11 +88,13 @@
 			children = (
 				F340EB552C87F8E200FE51A2 /* immersiveApp.swift */,
 				F340EB572C87F8E200FE51A2 /* ContentView.swift */,
+				F340EB772C88E87800FE51A2 /* SphereView.swift */,
 				F340EB592C87F8E200FE51A2 /* ImmersiveView.swift */,
 				F340EB5B2C87F8E200FE51A2 /* ImageBasedLighting.skybox */,
 				F340EB5D2C87F8E300FE51A2 /* Assets.xcassets */,
 				F340EB622C87F8E300FE51A2 /* Info.plist */,
 				F340EB5F2C87F8E300FE51A2 /* Preview Content */,
+				F340EB792C8AC66400FE51A2 /* GlobalState.swift */,
 			);
 			path = immersive;
 			sourceTree = "<group>";
@@ -222,6 +228,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				F340EB582C87F8E200FE51A2 /* ContentView.swift in Sources */,
+				F340EB7A2C8AC66400FE51A2 /* GlobalState.swift in Sources */,
+				F340EB782C88E87800FE51A2 /* SphereView.swift in Sources */,
 				F340EB562C87F8E200FE51A2 /* immersiveApp.swift in Sources */,
 				F340EB5A2C87F8E200FE51A2 /* ImmersiveView.swift in Sources */,
 			);
