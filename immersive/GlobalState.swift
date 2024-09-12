@@ -8,6 +8,16 @@
 import SwiftUI
 
 class GlobalState: ObservableObject {
-    @Published var regenerate: Bool = false
+    @Published var level: Int = 0
+    @Published var currentScene: SceneType = .start
     
+    enum SceneType {
+        case start, game
+    }
 }
+
+
+class ShapeGlobalState: ObservableObject {
+    @Published var regenerate: Bool = false
+}
+

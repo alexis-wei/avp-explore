@@ -9,19 +9,33 @@ import SwiftUI
 
 @main
 struct immersiveApp: App {
-    @StateObject private var globalState = GlobalState()
+    @StateObject var globalState = GlobalState()
+    @StateObject private var shapeGlobalState = ShapeGlobalState()
+    
+    
     var body: some Scene {
         WindowGroup {
-            ContentView().environmentObject(globalState)
+            if globalState.currentScene == .start {
+                StartView().environmentObject(globalState)
+            } else {
+                switch globalState.level {
+                case 1:
+                    ContentView().environmentObject(shapeGlobalState)
+                default:
+                    EmptyView()
+                }
+            }
         }.windowStyle(.volumetric)
-
-
-        ImmersiveSpace(id: "ImmersiveSpace") {
-//            ImmersiveView()
-            SphereView().environmentObject(globalState)
-        }.immersionStyle(selection: .constant(.full), in: .full)
         
-    
-
+        ImmersiveSpace(id: "ImmersiveSpace") {
+            switch globalState.level{
+            case 1:
+                SphereView().environmentObject(shapeGlobalState)
+            default:
+                EmptyView()
+            }
+        }.immersionStyle(selection: .constant(.mixed), in: .mixed)
     }
+    
+    
 }

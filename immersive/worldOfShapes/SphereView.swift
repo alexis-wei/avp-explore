@@ -11,10 +11,9 @@ import RealityKitContent
 
 struct SphereView: View {
 
-    @EnvironmentObject var globalState: GlobalState
-    @State private var count: Int = 5
+    @EnvironmentObject var globalState: ShapeGlobalState
+    @State private var count: Int = 40
     @State private var size:Float = 1.0
-    @State private var location:SIMD3<Float> = [1.0, 1.0, 1.0]
     @State private var realityViewContent: RealityViewContent?
     
     @State var allModels:[Entity] = []
@@ -23,21 +22,30 @@ struct SphereView: View {
         allModels.append(model)
     }
     
-    func GetRandom () -> Float{
+    func GetRandomPosition () -> Float{
         let randomVal = Float(Int.random(in: -10..<10))
+        return randomVal
+    }
+
+    func GetRandomSize() -> Float{
+        let randomVal = Float(Int.random(in: 1..<10))
         return randomVal
     }
     
     func AddSpheres() -> Void {
-        print("AddSpheres called")
         realityViewContent?.entities.removeAll()
-        for _ in 1...count {
-            let model = ModelEntity(
-                mesh: .generateSphere(radius: 0.2),
-                         materials: [SimpleMaterial(color: .white, isMetallic: true)])
-            model.position = SIMD3<Float>(GetRandom(),GetRandom(),GetRandom())
-            allModels.append(model)
-            realityViewContent?.add(model)
+        withAnimation{
+            
+            for _ in 1...count {
+
+                let model = ModelEntity(
+                    mesh: .generateSphere(radius: GetRandomSize() * 0.1),
+                    materials: [SimpleMaterial(color: .white, isMetallic: true)])
+                model.position = SIMD3<Float>(GetRandomPosition(),GetRandomPosition(),GetRandomPosition())
+        
+                allModels.append(model)
+                realityViewContent?.add(model)
+            }
         }
     }
     
@@ -45,13 +53,10 @@ struct SphereView: View {
 
         RealityView { content in
             realityViewContent = content
-//            let anchor = AnchorEntity(.plane(.horizontal,
-//                                             classification: .any,
-//                                             minimumBounds: SIMD2<Float>(0.2, 0.2)
-//                         ))
+            let anchor = AnchorEntity()
 
             AddSpheres()
-            
+
 
         }.onChange(of: globalState.regenerate){ _, newValue in
             print("newValue:", newValue)
@@ -64,6 +69,6 @@ struct SphereView: View {
     }
 }
 
-#Preview (immersionStyle: .full){
+#Preview (immersionStyle: .automatic){
     SphereView()
 }

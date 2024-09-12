@@ -10,7 +10,7 @@ import RealityKit
 import RealityKitContent
 
 struct ContentView: View {
-    @EnvironmentObject var globalState: GlobalState
+    @EnvironmentObject var globalState: ShapeGlobalState
 
     @State private var enlarge = false
     @State private var showImmersiveSpace = false

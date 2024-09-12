@@ -10,13 +10,15 @@
 		F340EB542C87F8E200FE51A2 /* RealityKitContent in Frameworks */ = {isa = PBXBuildFile; productRef = F340EB532C87F8E200FE51A2 /* RealityKitContent */; };
 		F340EB562C87F8E200FE51A2 /* immersiveApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = F340EB552C87F8E200FE51A2 /* immersiveApp.swift */; };
 		F340EB582C87F8E200FE51A2 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F340EB572C87F8E200FE51A2 /* ContentView.swift */; };
-		F340EB5A2C87F8E200FE51A2 /* ImmersiveView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F340EB592C87F8E200FE51A2 /* ImmersiveView.swift */; };
 		F340EB5C2C87F8E200FE51A2 /* ImageBasedLighting.skybox in Resources */ = {isa = PBXBuildFile; fileRef = F340EB5B2C87F8E200FE51A2 /* ImageBasedLighting.skybox */; };
 		F340EB5E2C87F8E300FE51A2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F340EB5D2C87F8E300FE51A2 /* Assets.xcassets */; };
 		F340EB612C87F8E300FE51A2 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F340EB602C87F8E300FE51A2 /* Preview Assets.xcassets */; };
 		F340EB6C2C87F8E300FE51A2 /* immersiveTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F340EB6B2C87F8E300FE51A2 /* immersiveTests.swift */; };
 		F340EB782C88E87800FE51A2 /* SphereView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F340EB772C88E87800FE51A2 /* SphereView.swift */; };
 		F340EB7A2C8AC66400FE51A2 /* GlobalState.swift in Sources */ = {isa = PBXBuildFile; fileRef = F340EB792C8AC66400FE51A2 /* GlobalState.swift */; };
+		F35C21CD2C8BF07B006A8590 /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = F35C21CC2C8BF07B006A8590 /* .gitignore */; };
+		F3AF273E2C90D05300BFD411 /* yoga_mat.usdz in Resources */ = {isa = PBXBuildFile; fileRef = F3AF273D2C90D05300BFD411 /* yoga_mat.usdz */; };
+		F3AF27432C90D32A00BFD411 /* StartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3AF27422C90D32A00BFD411 /* StartView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,7 +36,6 @@
 		F340EB522C87F8E200FE51A2 /* RealityKitContent */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = RealityKitContent; sourceTree = "<group>"; };
 		F340EB552C87F8E200FE51A2 /* immersiveApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = immersiveApp.swift; sourceTree = "<group>"; };
 		F340EB572C87F8E200FE51A2 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
-		F340EB592C87F8E200FE51A2 /* ImmersiveView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImmersiveView.swift; sourceTree = "<group>"; };
 		F340EB5B2C87F8E200FE51A2 /* ImageBasedLighting.skybox */ = {isa = PBXFileReference; lastKnownFileType = file.skybox; path = ImageBasedLighting.skybox; sourceTree = "<group>"; };
 		F340EB5D2C87F8E300FE51A2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F340EB602C87F8E300FE51A2 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
@@ -43,6 +44,9 @@
 		F340EB6B2C87F8E300FE51A2 /* immersiveTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = immersiveTests.swift; sourceTree = "<group>"; };
 		F340EB772C88E87800FE51A2 /* SphereView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SphereView.swift; sourceTree = "<group>"; };
 		F340EB792C8AC66400FE51A2 /* GlobalState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlobalState.swift; sourceTree = "<group>"; };
+		F35C21CC2C8BF07B006A8590 /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
+		F3AF273D2C90D05300BFD411 /* yoga_mat.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = yoga_mat.usdz; sourceTree = "<group>"; };
+		F3AF27422C90D32A00BFD411 /* StartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -67,6 +71,7 @@
 		F340EB452C87F8E200FE51A2 = {
 			isa = PBXGroup;
 			children = (
+				F35C21CC2C8BF07B006A8590 /* .gitignore */,
 				F340EB502C87F8E200FE51A2 /* immersive */,
 				F340EB512C87F8E200FE51A2 /* Packages */,
 				F340EB6A2C87F8E300FE51A2 /* immersiveTests */,
@@ -87,11 +92,11 @@
 			isa = PBXGroup;
 			children = (
 				F340EB552C87F8E200FE51A2 /* immersiveApp.swift */,
-				F340EB572C87F8E200FE51A2 /* ContentView.swift */,
-				F340EB772C88E87800FE51A2 /* SphereView.swift */,
-				F340EB592C87F8E200FE51A2 /* ImmersiveView.swift */,
+				F3AF27422C90D32A00BFD411 /* StartView.swift */,
+				F3AF273F2C90D22200BFD411 /* worldOfShapes */,
 				F340EB5B2C87F8E200FE51A2 /* ImageBasedLighting.skybox */,
 				F340EB5D2C87F8E300FE51A2 /* Assets.xcassets */,
+				F3AF273D2C90D05300BFD411 /* yoga_mat.usdz */,
 				F340EB622C87F8E300FE51A2 /* Info.plist */,
 				F340EB5F2C87F8E300FE51A2 /* Preview Content */,
 				F340EB792C8AC66400FE51A2 /* GlobalState.swift */,
@@ -121,6 +126,15 @@
 				F340EB6B2C87F8E300FE51A2 /* immersiveTests.swift */,
 			);
 			path = immersiveTests;
+			sourceTree = "<group>";
+		};
+		F3AF273F2C90D22200BFD411 /* worldOfShapes */ = {
+			isa = PBXGroup;
+			children = (
+				F340EB572C87F8E200FE51A2 /* ContentView.swift */,
+				F340EB772C88E87800FE51A2 /* SphereView.swift */,
+			);
+			path = worldOfShapes;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -207,6 +221,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F35C21CD2C8BF07B006A8590 /* .gitignore in Resources */,
+				F3AF273E2C90D05300BFD411 /* yoga_mat.usdz in Resources */,
 				F340EB5E2C87F8E300FE51A2 /* Assets.xcassets in Resources */,
 				F340EB612C87F8E300FE51A2 /* Preview Assets.xcassets in Resources */,
 				F340EB5C2C87F8E200FE51A2 /* ImageBasedLighting.skybox in Resources */,
@@ -230,8 +246,8 @@
 				F340EB582C87F8E200FE51A2 /* ContentView.swift in Sources */,
 				F340EB7A2C8AC66400FE51A2 /* GlobalState.swift in Sources */,
 				F340EB782C88E87800FE51A2 /* SphereView.swift in Sources */,
+				F3AF27432C90D32A00BFD411 /* StartView.swift in Sources */,
 				F340EB562C87F8E200FE51A2 /* immersiveApp.swift in Sources */,
-				F340EB5A2C87F8E200FE51A2 /* ImmersiveView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
